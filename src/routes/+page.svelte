@@ -9,16 +9,18 @@
 	<title>{config.title}</title>
 </svelte:head>
 
-<section>
-	<ul class="posts">
-		{#each data.posts as post}
-			<li class="post">
-				<a href={post.slug} class="title text-1xl font-bold underline">{post.title}</a>
-				<p class="date">{formatDate(post.date)}</p>
-				<p class="description">{post.description}</p>
-			</li>
-		{/each}
-	</ul>
+<section class="flex flex-1 flex-col items-center justify-center">
+	<div class="card m-4 w-80 shadow">
+		<ul class="posts">
+			{#each data.posts as post}
+				<li class="post">
+					<a href={post.slug} class="title">{post.title}</a>
+					<p class="date">{formatDate(post.date)}</p>
+					<p class="description">{post.description}</p>
+				</li>
+			{/each}
+		</ul>
+	</div>
 </section>
 
 <style lang="postcss">

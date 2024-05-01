@@ -2,7 +2,7 @@
 	import * as config from '$lib/config'
 </script>
 
-<footer>
+<footer class="flex flex-1 flex-col items-center justify-center">
 	<p>{config.title} &copy {new Date().getFullYear()}</p>
 </footer>
 
