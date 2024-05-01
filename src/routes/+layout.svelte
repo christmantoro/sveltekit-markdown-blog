@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Footer from './footer.svelte'
-	import Header from './header.svelte'
-	import PageTransition from './transition.svelte'
+	import Footer from './components/footer.svelte'
+	import Header from './components/header.svelte'
+	import PageTransition from './components/transition.svelte'
 
 	import 'open-props/style'
 	import 'open-props/normalize'
@@ -35,6 +35,7 @@
 
 	main {
 		padding-block: var(--size-9);
+		justify-content: center;
 	}
 
 	@media (min-width: 1440px) {

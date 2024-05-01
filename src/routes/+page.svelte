@@ -13,7 +13,7 @@
 	<ul class="posts">
 		{#each data.posts as post}
 			<li class="post">
-				<a href={post.slug} class="title">{post.title}</a>
+				<a href={post.slug} class="title text-1xl font-bold underline">{post.title}</a>
 				<p class="date">{formatDate(post.date)}</p>
 				<p class="description">{post.description}</p>
 			</li>
@@ -21,7 +21,7 @@
 	</ul>
 </section>
 
-<style>
+<style lang="postcss">
 	.posts {
 		display: grid;
 		gap: var(--size-7);
@@ -34,11 +34,6 @@
 	.post:not(:last-child) {
 		border-bottom: 1px solid var(--border);
 		padding-bottom: var(--size-7);
-	}
-
-	.title {
-		font-size: var(--font-size-fluid-3);
-		text-transform: capitalize;
 	}
 
 	.date {
